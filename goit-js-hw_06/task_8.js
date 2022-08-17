@@ -1,7 +1,9 @@
 // Масив імен всіх користувачів у яких є друг із зазначеним ім'ям.
 
+import users from "./users.js";
+
 const getUsersWithFriend = (users, friendName) => {
-  // твій код
+  return users.filter(user => user["friends"].includes(friendName)).map(user => user.name);
 };
 
 console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]

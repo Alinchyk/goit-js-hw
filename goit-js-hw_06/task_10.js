@@ -1,6 +1,13 @@
 // Отримати масив всіх умінь всіх користувачів (поле skills), при цьому не має бути повторюваних умінь і вони повинні бути відсортовані в алфавітному порядку.
+
+import users from "./users.js";
+
 const getSortedUniqueSkills = users => {
-  // твій код
+  const result = users
+    .flatMap(user => user.skills)
+    .filter((value, index, arr) => arr.indexOf(value) === index)
+    .sort();
+  return result;
 };
 
 console.log(getSortedUniqueSkills(users));

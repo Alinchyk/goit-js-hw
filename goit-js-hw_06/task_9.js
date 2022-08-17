@@ -1,7 +1,10 @@
 // Масив імен (поле name) людей, відсортованих в залежності від кількості їх друзів (поле friends)
 
+import users from "./users.js";
+
 const getNamesSortedByFriendsCount = users => {
-  // твій код
+  const names = [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name);
+  return names;
 };
 
 console.log(getNamesSortedByFriendsCount(users));
