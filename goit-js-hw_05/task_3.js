@@ -20,20 +20,23 @@ class Storage {
   }
 
   removeItem(item) {
-    items.splice(1, 1);
+    let index = this.items.indexOf(item);
+    if (index !== -1) {
+      return this.items.splice(index, 1);
+    }
   }
 }
 
 const storage = new Storage(["Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор"]);
 
 const items = storage.getItems();
-console.table(items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор" ]
-console.log(items);
+// console.table(items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор" ]
+console.log(storage.items);
 
 storage.addItem("Дроїд");
-console.table(storage.items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор", "Дроїд" ]
-console.log(items);
+// console.table(storage.items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор", "Дроїд" ]
+console.log(storage.items);
 
 storage.removeItem("Пролонгер");
-console.table(storage.items); // [ "Нанітоіди", "Залізні жупи", "Антигравітатор", "Дроїд" ]
-console.log(items);
+// console.table(storage.items); // [ "Нанітоіди", "Залізні жупи", "Антигравітатор", "Дроїд" ]
+console.log(storage.items);

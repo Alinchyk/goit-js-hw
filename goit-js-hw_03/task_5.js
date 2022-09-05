@@ -7,11 +7,11 @@ const products = [
   { name: "Захоплення", price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function (arr, prop) {
+const getAllPropValues = function (array = [], prop) {
   const values = [];
 
-  for (const products of arr) {
-    let value = products[prop];
+  for (const arr of array) {
+    let value = arr[prop];
 
     if (value) {
       values.push(value);
@@ -21,8 +21,8 @@ const getAllPropValues = function (arr, prop) {
   return values;
 };
 
-console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
+// console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
 
-console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
+// console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
 
-console.log(getAllPropValues(products, "category")); // []
+// console.log(getAllPropValues(products, "category")); // []

@@ -33,3 +33,6 @@ account.showOrders();
 
 // console.log(account.balance); // 19000
 // console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3', 'order-4']
+
+
+const a = function(

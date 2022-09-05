@@ -32,3 +32,8 @@ invokeInventoryAction("Gas mask", inventory.remove.bind(inventory));
 // Removing Gas mask from inventory
 
 console.log(inventory.items); // ['Knife', 'Medkit']
+
+
+//!
+
+ https://learn.javascript.ru/object-methods
