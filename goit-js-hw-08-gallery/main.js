@@ -1,5 +1,4 @@
 import gallery from "./gallery-items.js";
-console.log(gallery);
 
 const refs = {
   container: document.querySelector(".js-gallery"),
@@ -9,15 +8,17 @@ const refs = {
   content: document.querySelector(".lightbox__content"),
 };
 
+// створення галереї
 function createGallery(images) {
-  const galleryImg = images.reduce(
-    (item, img) =>
-      item +
-      `<li class="gallery__item">
-      <a class="gallery__link " href="#"><img class="gallery__image" src="${img.preview}" data-sours="${img.original}" alt="${img.description}" /></a>
-    </li>`,
-    "",
-  );
+  const galleryImg = images
+    .map(({ original, description, preview }) => {
+      return `<li class="gallery__item">
+      <a class="gallery__link" href="${original}"
+        ><img class="gallery__image" src="${preview}" alt="${description}" data-source="${original}"
+      /></a>
+    </li>`;
+    })
+    .join("");
   return refs.container.insertAdjacentHTML("afterbegin", galleryImg);
 }
 createGallery(gallery);

@@ -14,10 +14,10 @@
 // </div>; */}
 
 let counterValue = 0;
-let getValue = document.querySelector("#value");
+const getValue = document.querySelector("#value");
 
 function increment() {
-  counterValue = counterValue + 1;
+  counterValue += 1;
   getValue.textContent = counterValue;
 }
 
@@ -26,8 +26,8 @@ function decrement() {
   getValue.textContent = counterValue;
 }
 
-const firstBtn = document.querySelector(' button[data-action="decrement"]');
-const secondBtn = document.querySelector(' button[data-action="increment"]');
+const firstBtn = document.querySelector('button[data-action="decrement"]');
+const secondBtn = document.querySelector('button[data-action="increment"]');
 
 firstBtn.addEventListener("click", decrement);
 secondBtn.addEventListener("click", increment);

@@ -30,11 +30,13 @@ const fragment = document.createDocumentFragment();
 images.forEach(item => {
   const createLi = document.createElement("li");
   const createImg = document.createElement("img");
-  createLi.prepend(createImg);
+
   createImg.setAttribute("alt", item.alt);
   createImg.setAttribute("src", item.url);
   createImg.setAttribute("width", "400");
   createImg.setAttribute("height", "250");
+
+  createLi.prepend(createImg);
   fragment.append(createLi);
 });
 

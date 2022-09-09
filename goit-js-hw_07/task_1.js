@@ -44,7 +44,7 @@
 // Категорія: Тварини
 // Кількість елементів: 4
 
-let searchLi = document.querySelectorAll(".item");
+const searchLi = document.querySelectorAll(".item");
 console.log(`У списку ${searchLi.length} категорії`);
 
 searchLi.forEach(searchElem => {
