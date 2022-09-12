@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.text {
+  height: 150px;
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  background-color: #ececec;
+  padding-top: 50px;
+  font-size: 20px;
+}
+
+.task {
+  min-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  background-color: #ececec;
+}

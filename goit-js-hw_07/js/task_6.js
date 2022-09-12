@@ -10,14 +10,15 @@
 // Якщо введена відповідна кількість, то border інпут стає зеленим,   якщо неправильне - червоним.
 // Для додавання стилів, використовуй CSS-класи valid і invalid.
 
-const checkInput = document.getElementById("validation-input");
+const inputEl = document.querySelector("#validation-input");
+const inputLength = inputEl.dataset.length;
 
-checkInput.onblur = function () {
-  if (this.getAttribute("data-length") > this.value.length) {
-    this.classList.remove("valid");
-    this.classList.add("invalid");
+inputEl.onblur = function (e) {
+  if (e.target.value.length === +inputLength) {
+    inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
   } else {
-    this.classList.remove("invalid");
-    this.classList.add("valid");
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
   }
 };

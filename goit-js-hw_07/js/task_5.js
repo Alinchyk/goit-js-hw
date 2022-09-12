@@ -5,5 +5,13 @@
 // // <h1>Привіт, <span id="name-output">незнайомець</span>!</h1> */
 // // }
 
-// const checkInput = document.querySelector("#name-input");
-// const checkOutput = document.querySelector("#name-output");
+const input = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
+
+input.oninput = function () {
+  if (input.value === "") {
+    nameOutput.innerText = "незнайомець";
+  } else {
+    nameOutput.innerText = input.value;
+  }
+};
