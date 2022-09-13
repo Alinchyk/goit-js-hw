@@ -138,31 +138,3 @@ body {
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.lightbox__prev-button,
-.lightbox__next-button {
-  position: absolute;
-  top: 50%;
-  z-index: 4;
-  font-size: 2em;
-  margin-top: -1.2em;
-  opacity: 0.5;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.lightbox__next-button {
-  right: 0;
-  padding: 10px 5px 15px 10px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background: url(../images/right.svg);
-}
-
-.lightbox__prev-button {
-  left: 0;
-  padding: 10px 10px 15px 5px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  background: url(../images/left.svg);
-}

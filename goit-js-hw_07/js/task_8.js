@@ -8,3 +8,8 @@
 // Размеры самого первого div - 30px на 30px
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
+
+const controls = document.querySelector("#controls");
+const input = document.querySelector("input");
+
+function createBoxes(amount) {}

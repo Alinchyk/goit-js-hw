@@ -6,12 +6,12 @@
 // // }
 
 const input = document.querySelector("#name-input");
-const output = document.querySelector("#name-output");
 
-input.oninput = function () {
+input.addEventListener("keyup", function (e) {
+  const output = document.querySelector("#name-output");
   if (input.value === "") {
-    nameOutput.innerText = "незнайомець";
+    output.textContent = "незнайомець";
   } else {
-    nameOutput.innerText = input.value;
+    output.textContent = e.target.value;
   }
-};
+});
