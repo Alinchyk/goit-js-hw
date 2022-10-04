@@ -15,7 +15,7 @@ if (total < ordered) {
   console.log("Замовлення оформлено, з вами звяжеться менеджер");
 }
 
-ordered = 20;
+ordered = 80;
 
 if (total < ordered) {
   console.log("На складі недостатньо товарів!");

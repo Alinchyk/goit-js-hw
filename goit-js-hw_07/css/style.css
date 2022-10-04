@@ -8,9 +8,7 @@ body {
   font-family: sans-serif;
 }
 .container {
-  /* position: relative; */
   justify-content: center;
-  /* display: flex; */
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
@@ -25,7 +23,6 @@ body {
 }
 .items {
   list-style: none;
-  /* position: absolute; */
   display: grid;
   gap: 60px;
   text-align: center;
@@ -50,7 +47,7 @@ body {
 }
 
 .item:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }

@@ -8,7 +8,7 @@ const refs = {
   btn: document.querySelector('[data-action="close-lightbox"]'),
 };
 
-// створення галереї
+// створення галереї`
 const createGalery = function (images) {
   return images
     .map(
@@ -72,7 +72,7 @@ const onArrowLeftPress = function (evt) {
 
   if (isArrLeftKey) {
     const sources = imgGalery.map(({ original }) => original);
-    let indexOfCurrentImg = sources.indexOf(img.src);
+    let indexOfCurrentImg = sources.indexOf(refs.img.src);
 
     if (indexOfCurrentImg === 0) {
       indexOfCurrentImg = sources.length;

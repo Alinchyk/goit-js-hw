@@ -7,7 +7,7 @@ const getUsersWithFriend = (users, friendName) => {
 };
 
 //! лишние итерации
-//  reduce
+//!  reduce
 
 console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]

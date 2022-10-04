@@ -9,7 +9,53 @@
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
-const controls = document.querySelector("#controls");
-const input = document.querySelector("input");
+const refs = {
+  input: document.querySelector("#controls input"),
+  createboxBtn: document.querySelector('[data-action="render"]'),
+  deleteboxBtn: document.querySelector('[data-action="destroy"]'),
+  boxes: document.querySelector("#boxes"),
+};
 
-function createBoxes(amount) {}
+const inputChange = e => {
+  refs.input.setAttribute("count", Number(e.currentTarget.value));
+};
+
+let baseboxSize = 30;
+
+const random_bg_color = function () {
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  return bgColor;
+};
+random_bg_color();
+
+const createbox = () => {
+  let countBox = Number(refs.input.getAttribute("count"));
+
+  for (let i = 0; i < countBox; i += 1) {
+    baseboxSize += 10;
+    const newBox = document.createElement("div");
+    newBox.style.background = random_bg_color();
+    newBox.style.height = baseboxSize + "px";
+    newBox.style.width = baseboxSize + "px";
+    newBox.style.margin = "10px";
+    newBox.classList.add("new-box");
+    boxes.append(newBox);
+  }
+};
+
+const deletebox = () => {
+  const allNewBoxes = document.querySelectorAll(".new-box");
+
+  for (let allNewBoxe of allNewBoxes) {
+    refs.boxes.removeChild(allNewBoxe);
+  }
+  baseboxSize = 30;
+};
+
+// слухачі
+refs.input.addEventListener("input", inputChange);
+refs.createboxBtn.addEventListener("click", createbox);
+refs.deleteboxBtn.addEventListener("click", deletebox);
