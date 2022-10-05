@@ -6,6 +6,8 @@ const refs = {
   overley: document.querySelector(".lightbox__overlay"),
   img: document.querySelector(".lightbox__image"),
   btn: document.querySelector('[data-action="close-lightbox"]'),
+  scrollLeft: document.querySelector(".lightbox-button-left"),
+  scrollRight: document.querySelector(".lightbox-button-right"),
 };
 
 // створення галереї`
@@ -66,6 +68,7 @@ function onBOverlayClick(evt) {
 refs.overley.addEventListener("click", onBOverlayClick);
 
 // слайдер
+
 const onArrowLeftPress = function (evt) {
   const ARR_LEFT_KEY_CODE = "ArrowLeft";
   const isArrLeftKey = evt.code === ARR_LEFT_KEY_CODE;

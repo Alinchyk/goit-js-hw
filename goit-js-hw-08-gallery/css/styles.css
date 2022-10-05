@@ -138,3 +138,49 @@ body {
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.lightbox__content {
+  display: flex;
+  align-items: center;
+}
+
+.lightbox-button-left {
+  margin-right: 25px;
+
+  width: 60px;
+  height: 60px;
+
+  background-image: url("../images/left.svg");
+  background-position: 20% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.lightbox-button-right {
+  margin-left: 25px;
+
+  width: 60px;
+  height: 60px;
+
+  background-image: url("../images/right.svg");
+  background-position: 80% 50%;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.lightbox-button-left:hover,
+.lightbox-button-right:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
