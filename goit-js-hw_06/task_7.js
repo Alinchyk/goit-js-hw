@@ -2,7 +2,8 @@
 
 import users from "./users.js";
 
-const callback = (totalBalance, { balance }) => totalBalance + balance;
-const calculateTotalBalance = users => users.reduce(callback, 0);
+const cb = (totalBalance, { balance }) => totalBalance + balance;
+
+const calculateTotalBalance = users => users.reduce(cb, 0);
 
 console.log(calculateTotalBalance(users)); // 20916
