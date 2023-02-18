@@ -45,12 +45,12 @@
 // Кількість елементів: 4
 
 const searchLi = document.querySelectorAll(".item");
+
+// підрахунок і виведення категорій
 console.log(`У списку ${searchLi.length} категорії`);
 
+// підрахунок і виведення інформації категорій
 searchLi.forEach(searchElem => {
-  console.log(
-    `Категорія: ${searchElem.querySelector("h2").textContent} Кількість елементів: ${
-      searchElem.querySelectorAll(".item li").length
-    }`,
-  );
+  console.log(`Категорія: ${searchElem.querySelector("h2").textContent}`);
+  console.log(`Кількість елементів: ${searchElem.querySelectorAll(".item li").length}`);
 });
