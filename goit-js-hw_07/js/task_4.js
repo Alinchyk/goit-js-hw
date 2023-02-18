@@ -13,21 +13,82 @@
 //   </button>
 // </div>; */}
 
+// let counterValue = 0;
+// const getValue = document.querySelector("#value");
+
+// const a = {
+//   value: 0,
+//   increment: () => {},
+//   decrement: () => {},
+// };
+
+// const increment = () => {
+//   counterValue += 1;
+//   getValue.textContent = counterValue;
+// };
+
+// const decrement = () => {
+//   counterValue = counterValue - 1;
+//   getValue.textContent = counterValue;
+// };
+
+// const firstBtn = document.querySelector('button[data-action="decrement"]');
+// const secondBtn = document.querySelector('button[data-action="increment"]');
+
+// firstBtn.addEventListener("click", decrement); //! делегирование по data-action // [data-action="decrement"]
+// secondBtn.addEventListener("click", increment);
+
 let counterValue = 0;
+const counter = document.querySelector("#counter");
 const getValue = document.querySelector("#value");
 
-function increment() {
-  counterValue += 1;
-  getValue.textContent = counterValue;
-}
+const onClick = e => {
+  if (e.target.nodeName !== "BUTTON") {
+    return;
+  }
 
-function decrement() {
-  counterValue = counterValue - 1;
-  getValue.textContent = counterValue;
-}
+  if (e.target.dataset.action === "increment") {
+    counterValue += 1;
+    getValue.textContent = counterValue;
+  }
 
-const firstBtn = document.querySelector('button[data-action="decrement"]');
-const secondBtn = document.querySelector('button[data-action="increment"]');
+  if (e.target.dataset.action === "decrement") {
+    counterValue = counterValue - 1;
+    getValue.textContent = counterValue;
+  }
+};
 
-firstBtn.addEventListener("click", decrement);
-secondBtn.addEventListener("click", increment);
+// слухач
+counter.addEventListener("click", onClick);
+
+//!
+
+// const getValue = document.querySelector("#value");
+// const firstBtn = document.querySelector('button[data-action="decrement"]');
+// const secondBtn = document.querySelector('button[data-action="increment"]');
+
+// const Counter = function ({ node, initialValue = 0 }) {
+//   {
+//     this.node = node;
+//     this.value = initialValue;
+
+//     this.updateNode = function () {
+//       this.node.textContent = this.value;
+//     };
+
+//     this.increment = () => {
+//       this.value += 1;
+//       this.updateNode();
+//     };
+
+//     this.decrement = () => {
+//       this.value -= 1;
+//       this.updateNode();
+//     };
+//   }
+// };
+
+// const counter = new Counter({ node: getValue });
+
+// secondBtn.addEventListener("click", counter.increment);
+// firstBtn.addEventListener("click", counter.decrement);
