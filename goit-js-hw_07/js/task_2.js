@@ -9,12 +9,18 @@
 const ingredients = ["Картопля", "Гриби", "Часник", "Помідори", "Зелень", "Приправи"];
 // Напиши скрипт, який для кожного елемента масиву ingredients створить окремий li, після чого вставить всі li за одну операцію в список ul.ingredients. Для створення DOM-вузлів використовуй document.createElement().
 
-const createLi = document.getElementById("ingredients");
+const list = document.querySelector("#ingredients");
 
-ingredients.forEach(item => {
-  const li = document.createElement("li");
-  li.innerText = item;
-  createLi.append(li);
-});
+// створення елемента
+const listMarkup = function (ingredients) {
+  return ingredients.map(ingredient => {
+    const li = document.createElement("li");
+    li.textContent = ingredient;
 
-console.log(createLi);
+    return li;
+  });
+};
+
+// створення розмітки
+const elements = listMarkup(ingredients);
+list.append(...elements);
