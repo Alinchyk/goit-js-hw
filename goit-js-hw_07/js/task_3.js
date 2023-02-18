@@ -25,21 +25,16 @@ const images = [
 ];
 
 const list = document.querySelector("#gallery");
-const fragment = document.createDocumentFragment();
 
-images.forEach(item => {
-  const createLi = document.createElement("li");
-  const createImg = document.createElement("img");
+// створення елемента
+const makeEl = image => {
+  const { url, alt } = image;
 
-  createImg.setAttribute("alt", item.alt);
-  createImg.setAttribute("src", item.url);
-  createImg.setAttribute("width", "400");
-  createImg.setAttribute("height", "250");
+  return `  
+   <li><img src="${url}" alt="${alt}" width="400" height="250" /></li>`;
+};
 
-  createLi.prepend(createImg);
-  fragment.append(createLi);
-});
+// створення розмітки
+const listMarkup = images.map(makeEl).join("");
 
-list.prepend(fragment);
-
-console.log(list);
+list.insertAdjacentHTML("beforeend", listMarkup);
