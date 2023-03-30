@@ -25,7 +25,6 @@ account.changeDiscount(0.15);
 
 account.showOrders();
 // console.log(account.discount); // 0.15
-
 // console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3']
 
 account.addOrder(5000, "order-4");
@@ -33,6 +32,3 @@ account.showOrders();
 
 // console.log(account.balance); // 19000
 // console.table(account.showOrders()); // ['order-1', 'order-2', 'order-3', 'order-4']
-
-
-const a = function(

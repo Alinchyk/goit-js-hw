@@ -9,24 +9,22 @@
 const total = 100;
 let ordered = 20;
 
-if (total < ordered) {
+if (ordered > total) {
   console.log("На складі недостатньо товарів!");
 } else {
-  console.log("Замовлення оформлено, з вами звяжеться менеджер");
+  console.log("Замовлення оформлено, з вами зв'яжеться менеджер");
 }
 
 ordered = 80;
-
-if (total < ordered) {
+if (ordered > total) {
   console.log("На складі недостатньо товарів!");
 } else {
-  console.log("Замовлення оформлено, з вами звяжеться менеджер");
+  console.log("Замовлення оформлено, з вами зв'яжеться менеджер");
 }
 
 ordered = 130;
-
-if (total < ordered) {
+if (ordered > total) {
   console.log("На складі недостатньо товарів!");
 } else {
-  console.log("Замовлення оформлено, з вами звяжеться менеджер");
+  console.log("Замовлення оформлено, з вами зв'яжеться менеджер");
 }

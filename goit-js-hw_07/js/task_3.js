@@ -26,7 +26,6 @@ const images = [
 
 const list = document.querySelector("#gallery");
 
-// створення елемента
 const makeEl = image => {
   const { url, alt } = image;
 
@@ -34,7 +33,5 @@ const makeEl = image => {
    <li><img src="${url}" alt="${alt}" width="400" height="250" /></li>`;
 };
 
-// створення розмітки
 const listMarkup = images.map(makeEl).join("");
-
 list.insertAdjacentHTML("beforeend", listMarkup);

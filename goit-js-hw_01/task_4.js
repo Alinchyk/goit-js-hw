@@ -12,23 +12,13 @@
 
 const credits = 23580;
 const pricePerDroid = 3000;
-let message;
+let result = prompt("Введіть кількість:");
+let totalPrice = pricePerDroid * result;
 
-let quantity = prompt("Введіть кількість дроїдів");
-
-const totalPrice = quantity * pricePerDroid;
-
-if (totalPrice > credits) {
-  message = "Недостатньо коштів на рахунку!";
-}
-
-if (totalPrice < credits) {
-  message = `Ви купили ${quantity} дроїдів, на рахунку залишилося ${credits - totalPrice} кредитів.`;
-}
-
-if (quantity === null) {
-  message = " ";
+if (result === null) {
   console.log("Скасовано користувачем!");
+} else if (totalPrice > credits) {
+  console.log("Недостатньо коштів на рахунку!");
+} else {
+  console.log(`Ви купили ${result} дроїдів, на рахунку залишилося ${credits - totalPrice} кредитів.`);
 }
-
-alert(message);

@@ -11,7 +11,6 @@ const ingredients = ["Картопля", "Гриби", "Часник", "Помі
 
 const list = document.querySelector("#ingredients");
 
-// створення елемента
 const listMarkup = function (ingredients) {
   return ingredients.map(ingredient => {
     const li = document.createElement("li");
@@ -21,6 +20,5 @@ const listMarkup = function (ingredients) {
   });
 };
 
-// створення розмітки
 const elements = listMarkup(ingredients);
 list.append(...elements);

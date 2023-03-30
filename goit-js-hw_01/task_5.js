@@ -12,46 +12,6 @@
 // // // Індія - 80 кредитів
 // // // Ямайка - 120 кредитів
 
-// let cost;
-// let country = prompt("Введіть назву країни: ");
-
-// if (typeof country === "string" && country.trim().length > 0) {
-//   country = country[0].toUpperCase().concat(country.slice(1));
-// }
-
-// if (country === null || country === "") {
-//   alert(`Відмінено користувачем`);
-// } else
-//   switch (country) {
-//     case "Китай":
-//       cost = 100;
-//       alert(`Доставка в ${country} буде коштувати ${cost} кредитів`);
-//       break;
-
-//     case "Чилі":
-//       cost = 250;
-//       alert(`Доставка в ${country} буде коштувати ${cost} кредитів`);
-//       break;
-
-//     case "Австралія":
-//       cost = 170;
-//       alert(`Доставка в ${country} буде коштувати ${cost} кредитів`);
-//       break;
-
-//     case "Індія":
-//       cost = 80;
-//       alert(`Доставка в ${country} буде коштувати ${cost} кредитів`);
-//       break;
-
-//     case "Ямайка":
-//       cost = 120;
-//       alert(`Доставка в ${country} буде коштувати ${cost} кредитів`);
-//       break;
-
-//     default:
-//       alert("У вашій країні доставка недоступна");
-//   }
-
 let cost;
 let country = prompt("Введіть назву країни: ");
 let message = "Відмінено користувачем";

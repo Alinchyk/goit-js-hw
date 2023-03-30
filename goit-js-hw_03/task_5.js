@@ -21,8 +21,6 @@ const getAllPropValues = function (array = [], prop) {
   return values;
 };
 
-// console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
-
-// console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
-
-// console.log(getAllPropValues(products, "category")); // []
+console.log(getAllPropValues(products, "name")); // ['Радар', 'Сканер', 'Дроїд', 'Захоплення']
+console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 2]
+console.log(getAllPropValues(products, "category")); // []

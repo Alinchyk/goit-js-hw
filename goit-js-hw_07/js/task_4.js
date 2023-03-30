@@ -3,63 +3,28 @@
 // Створи змінну counterValue в якій буде зберігається поточне значення   лічильника.
 // Створи функції increment і decrement для збільшення і зменшення значення   лічильника.
 // Додай слухачі кліків на кнопки, виклики функцій та оновлення інтерфейсу
-// {/* <div id="counter">
-//   <button type="button" data-action="decrement">
-//     -1
-//   </button>
-//   <span id="value">0</span>
-//   <button type="button" data-action="increment">
-//     +1
-//   </button>
-// </div>; */}
 
-// let counterValue = 0;
-// const getValue = document.querySelector("#value");
-
-// const a = {
-//   value: 0,
-//   increment: () => {},
-//   decrement: () => {},
-// };
-
-// const increment = () => {
-//   counterValue += 1;
-//   getValue.textContent = counterValue;
-// };
-
-// const decrement = () => {
-//   counterValue = counterValue - 1;
-//   getValue.textContent = counterValue;
-// };
-
-// const firstBtn = document.querySelector('button[data-action="decrement"]');
-// const secondBtn = document.querySelector('button[data-action="increment"]');
-
-// firstBtn.addEventListener("click", decrement); //! делегирование по data-action // [data-action="decrement"]
-// secondBtn.addEventListener("click", increment);
-
-let counterValue = 0;
-const counter = document.querySelector("#counter");
+let counterNode = document.querySelector("#counter");
 const getValue = document.querySelector("#value");
+
+const counter = {
+  counterValue: 0,
+
+  update: function (value) {
+    this.counterValue += Number(value);
+    getValue.textContent = this.counterValue;
+  },
+};
 
 const onClick = e => {
   if (e.target.nodeName !== "BUTTON") {
     return;
   }
 
-  if (e.target.dataset.action === "increment") {
-    counterValue += 1;
-    getValue.textContent = counterValue;
-  }
-
-  if (e.target.dataset.action === "decrement") {
-    counterValue = counterValue - 1;
-    getValue.textContent = counterValue;
-  }
+  counter.update(e.target.dataset.action);
 };
 
-// слухач
-counter.addEventListener("click", onClick);
+counterNode.addEventListener("click", onClick);
 
 //!
 
